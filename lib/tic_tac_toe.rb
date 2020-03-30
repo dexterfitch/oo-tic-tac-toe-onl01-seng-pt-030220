@@ -17,7 +17,6 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-
   def input_to_index(index)
     index.to_i - 1
   end
@@ -109,15 +108,12 @@ class TicTacToe
   end
 
   def winner(player)
-    if player == "X"
-      puts "X is the winner!"
-      over?
-    elsif player == "O"
-      puts "O is the winner!"
-      over?
-    elsif player == "draw"
-      draw?
-      over?
+    if won?
+      if combo - @xs == []
+        "X"
+      elsif combo - @os == []
+        "O"
+      end
     end
   end
 end
