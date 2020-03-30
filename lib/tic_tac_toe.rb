@@ -23,11 +23,6 @@ class TicTacToe
 
   def move(index, mark)
     @board[index] = mark
-    if mark == "X"
-      @xs << index
-    else
-      @os << index
-    end
   end
 
   def position_taken?(index)
