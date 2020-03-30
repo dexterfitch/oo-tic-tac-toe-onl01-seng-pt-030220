@@ -129,6 +129,8 @@ class TicTacToe
 
   def play(board)
     while !over?
+      mark = current_player
+      puts "#{mark}'s turn, enter a number 1 - 9"
       turn
     end
     if won?
