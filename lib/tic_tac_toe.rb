@@ -89,11 +89,10 @@ class TicTacToe
   end
 
   def won?
-    result = scan_moves
-    if result == false
+    if scan_moves == false
       false
     else
-      result[0]
+      scan_moves[0]
     end
   end
 
