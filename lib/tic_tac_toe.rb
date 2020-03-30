@@ -75,7 +75,7 @@ class TicTacToe
   def scan_moves
     winning_moves = 0
     WIN_COMBINATIONS.each do |combo|
-      if combo - @xs == [] || combo - @os == []
+      if combo - @xs == []
         winning_moves = combo
       else
         winning_moves = false
