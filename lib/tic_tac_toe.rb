@@ -37,9 +37,9 @@ class TicTacToe
   def valid_move?(index)
     allowed_characters = [0,1,2,3,4,5,6,7,8]
     if allowed_characters.include?(index) && @board[index] != "X" && @board[index] != "O"
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
@@ -77,7 +77,7 @@ class TicTacToe
       if combo - @xs == [] || combo - @os == []
         combo
       else
-        return false
+        false
       end
     end
   end
@@ -85,25 +85,25 @@ class TicTacToe
   def full?
     if turn_count == 9
       puts "All spaces full!"
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
   def draw?
     if full? & !won?
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
   def over?
     if won? || draw?
-      return true
+      true
     else
-      return false
+      false
     end
   end
 
