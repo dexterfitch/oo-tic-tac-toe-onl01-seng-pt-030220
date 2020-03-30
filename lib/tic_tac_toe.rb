@@ -120,7 +120,7 @@ class TicTacToe
     if won? == false
       false
     else
-      if @board[index[0]] == "X"
+      if @board[won?[0]] == "X"
         return "X"
       else
         return "O"
