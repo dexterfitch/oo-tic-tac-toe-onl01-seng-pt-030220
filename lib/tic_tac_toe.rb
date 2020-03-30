@@ -73,7 +73,7 @@ class TicTacToe
   end
 
   def won?
-    g = ""
+    g = 0
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == [] || combo - @os == []
         g = combo
