@@ -125,7 +125,11 @@ class TicTacToe
 
   def play(board)
     until over?
-      turn
+      mark = current_player
+      puts "#{mark}'s turn, enter a number 1 - 9"
+      input = gets.chomp
+      index = input_to_index(input)
+      turn(index)
     end
     if won?
       puts "#{winner} wins!"
