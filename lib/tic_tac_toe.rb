@@ -124,8 +124,7 @@ class TicTacToe
 
   def winner
     if won?
-      result = scan_moves
-      result[1]
+      scan_moves[1]
     end
   end
 
