@@ -76,11 +76,11 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == []
-        winner("X")
+        "X"
       elsif combo - @os == []
-        winner("O")
+        "O"
       else
-        nil
+        false
       end
     end
   end
