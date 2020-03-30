@@ -103,7 +103,11 @@ class TicTacToe
   end
 
   def over?
-    puts "Game Over"
+    if won? || draw?
+      true
+    else
+      false
+    end
   end
 
   def winner(player)
