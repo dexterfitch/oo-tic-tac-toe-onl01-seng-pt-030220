@@ -124,11 +124,8 @@ class TicTacToe
 
   def winner
     if won?
-      if combo - @xs == []
-        "X"
-      elsif combo - @os == []
-        "O"
-      end
+      result = scan_moves
+      result[1]
     end
   end
 
