@@ -73,10 +73,14 @@ class TicTacToe
   end
 
   def scan_moves
-    winning_moves = 0
+    winning_moves = []
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == []
+        winning_moves << combo
+        winning_moves << "X"
+      elsif combo - @os == []
         winning_moves = combo
+        winning_moves << "O"
       else
         winning_moves = false
       end
@@ -85,10 +89,11 @@ class TicTacToe
   end
 
   def won?
-    if scan_moves == false
+    result = scan_moves
+    if result == false
       false
     else
-      scan_moves
+      result[0]
     end
   end
 
