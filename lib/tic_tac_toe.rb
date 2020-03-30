@@ -58,11 +58,7 @@ class TicTacToe
     end
   end
 
-  def turn
-    mark = current_player
-    puts "#{mark}'s turn, enter a number 1 - 9"
-    input = gets.chomp
-    index = input_to_index(input)
+  def turn(index)
     if valid_move?(index) && !full?
       move(index, mark)
       display_board
