@@ -95,7 +95,11 @@ class TicTacToe
   end
 
   def draw?
-    puts "It's a draw!"
+    if full? & !won?
+      true
+    else
+      false
+    end
   end
 
   def over?
