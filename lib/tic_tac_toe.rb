@@ -75,13 +75,13 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == [] || combo - @os == []
-        return combo
+        combo
       else
         return false
       end
     end
   end
-@binding.pry
+
   def full?
     if turn_count == 9
       puts "All spaces full!"
