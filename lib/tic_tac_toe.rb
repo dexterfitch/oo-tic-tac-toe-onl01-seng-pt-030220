@@ -75,10 +75,8 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.each do |combo|
-      if combo - @xs == []
-        "X"
-      elsif combo - @os == []
-        "O"
+      if combo - @xs == [] || combo - @os == []
+        true
       else
         false
       end
