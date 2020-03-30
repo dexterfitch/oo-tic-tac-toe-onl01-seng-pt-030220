@@ -80,7 +80,7 @@ class TicTacToe
       elsif combo - @os == []
         winner("O")
       else
-        turn
+        nil
       end
     end
   end
