@@ -60,7 +60,6 @@ class TicTacToe
 
   def turn
     mark = current_player
-    puts "#{mark}'s turn, enter a number 1 - 9"
     input = gets.chomp
     index = input_to_index(input)
     if valid_move?(index) && !full?
