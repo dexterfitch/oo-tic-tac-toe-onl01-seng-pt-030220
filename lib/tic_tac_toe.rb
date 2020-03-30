@@ -132,5 +132,4 @@ class TicTacToe
     end
   end
 
-  play(@board)
 end
