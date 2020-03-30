@@ -93,7 +93,6 @@ class TicTacToe
 
   def full?
     if turn_count == 9
-      puts "All spaces full!"
       true
     else
       false
