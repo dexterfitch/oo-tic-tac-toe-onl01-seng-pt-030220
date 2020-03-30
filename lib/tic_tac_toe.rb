@@ -73,15 +73,15 @@ class TicTacToe
   end
 
   def won?
-    g = 0
+    winning_moves = 0
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == [] || combo - @os == []
-        g = combo
+        winning_moves = combo
       else
-        g = false
+        winning_moves = false
       end
     end
-    return g
+    return winning_moves
   end
 
   def full?
@@ -109,7 +109,7 @@ class TicTacToe
     end
   end
 
-  def winner(player)
+  def winner
     if won?
       if combo - @xs == []
         "X"
@@ -120,10 +120,10 @@ class TicTacToe
   end
 
   def play(board)
-    while !over?(board)
-      turn(board)
+    while !over?
+      turn
     end
-    if won?(board)
+    if won?
       puts "Congratulations " + winner(board) + "!"
     elsif draw?(board)
       puts "Cat's Game!"
