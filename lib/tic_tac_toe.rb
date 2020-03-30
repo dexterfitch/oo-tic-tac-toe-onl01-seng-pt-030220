@@ -110,9 +110,9 @@ class TicTacToe
   def winner(player)
     if won?
       if combo - @xs == []
-        "X"
+        return "X"
       elsif combo - @os == []
-        "O"
+        return "O"
       end
     end
   end
