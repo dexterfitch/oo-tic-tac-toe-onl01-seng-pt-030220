@@ -75,7 +75,7 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.each do |combo|
       if combo - @xs == [] || combo - @os == []
-        return true
+        combo
       else
         return false
       end
