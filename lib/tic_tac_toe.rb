@@ -59,6 +59,10 @@ class TicTacToe
   end
 
   def turn(index)
+    mark = current_player
+    puts "#{mark}'s turn, enter a number 1 - 9"
+    input = gets.chomp
+    index = input_to_index(input)
     if valid_move?(index) && !full?
       move(index, mark)
       display_board
@@ -125,11 +129,7 @@ class TicTacToe
 
   def play(board)
     until over?
-      mark = current_player
-      puts "#{mark}'s turn, enter a number 1 - 9"
-      input = gets.chomp
-      index = input_to_index(input)
-      turn(index)
+      turn
     end
     if won?
       puts "#{winner} wins!"
