@@ -121,9 +121,9 @@ class TicTacToe
       false
     else
       if @board[index[0]] == "X"
-        "X"
+        return "X"
       else
-        "O"
+        return "O"
       end
     end
   end
