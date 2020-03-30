@@ -37,9 +37,9 @@ class TicTacToe
   def valid_move?(index)
     allowed_characters = [0,1,2,3,4,5,6,7,8]
     if allowed_characters.include?(index) && @board[index] != "X" && @board[index] != "O"
-      true
+      return true
     else
-      false
+      return false
     end
   end
 
