@@ -52,17 +52,10 @@ class TicTacToe
   end
 
   def current_player
-    x = @board.select do |mark|
-      mark == "X"
-    end
-    o = @board.select do |mark|
-      mark == "O"
-    end
-
-    if x.length > o.length
-      "O"
-    else
+    if turn_count.even?
       "X"
+    else
+      "O"
     end
   end
 
@@ -71,13 +64,9 @@ class TicTacToe
     puts "#{mark}'s turn, enter a number 1 - 9"
     input = gets.chomp
     index = input_to_index(input)
-    vm = valid_move?(index)
-    if vm && !full?
+    if valid_move?(index) && !full?
       move(index, mark)
       display_board
-      won?
-    elsif full?
-      winner("draw")
     else
       puts "Space occupied, try another"
       turn
